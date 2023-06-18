@@ -1,5 +1,5 @@
 ---
-import HeaderSimple from "../layouts/Header.astro";
+import Header from "../components/Header.jsx";
 import FooterSimple from "../layouts/Footer.astro";
 import "animate.css";
 import RelojSimple from "../components/Reloj.jsx";
@@ -19,14 +19,14 @@ import RelojSimple from "../components/Reloj.jsx";
 		/>
 		<title>CV David</title>
 	</head>
-	<HeaderSimple />
+	<Header client:load></Header>
 	<body>
 		<div class="back-img">
 			<div class="container animate__animated animate__fadeIn">
 				<h1 class="title2">
 					<a class="animate__animated animate__fadeIn">Reloj</a>
 				</h1>
-				<RelojSimple />
+				<RelojSimple client:load></RelojSimple>
 			</div>
 		</div>
 	</body>

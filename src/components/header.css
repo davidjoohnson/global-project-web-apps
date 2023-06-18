@@ -26,8 +26,6 @@
     color: #fff;
     cursor: pointer;
     font-size: 20px;
-    margin-right: 10px;
-    /* Añade este estilo para evitar que el botón colapse */
 }
 
 .title {
@@ -45,10 +43,9 @@
     width: 100%;
     padding: 10px;
     display: none;
-    position: fixed;
 }
 
-.header:hover .nav {
+.nav.open {
     display: block;
 }
 

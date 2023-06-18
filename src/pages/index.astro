@@ -1,5 +1,5 @@
 ---
-import HeaderSimple from "../layouts/Header.astro";
+import Header from "../components/Header.jsx";
 import FooterSimple from "../layouts/Footer.astro";
 import "animate.css";
 ---
@@ -19,7 +19,7 @@ import "animate.css";
         <title>CV David</title>
     </head>
 
-    <HeaderSimple></HeaderSimple>
+    <Header client:load></Header>
 
     <body>
         <div class="hero">
