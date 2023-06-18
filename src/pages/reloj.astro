@@ -1,10 +1,33 @@
 ---
-import HeaderSimple from '../layouts/Header.astro';
-import FooterSimple from '../layouts/Footer.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Button from "../components/Button.jsx";
+import HeaderSimple from "../layouts/Header.astro";
+import FooterSimple from "../layouts/Footer.astro";
+import Header from "../components/Header.jsx";
+import Footer from "../components/Footer.jsx";
+import 'animate.css';
 ---
 
-<HeaderSimple></HeaderSimple>
-
-
-
-<FooterSimple></FooterSimple>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/icons8-logo.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<title>CV David</title>
+	</head>
+	<HeaderSimple />
+	<body>
+		<div class="hero">
+			<div class="hero-content">
+				<h1 class="title">
+					<a class="animate__animated animate__fadeIn"
+						>Curriculum de David García Contreras</a
+					>
+				</h1>
+			</div>
+		</div>
+	</body>
+	<FooterSimple />
+</html>

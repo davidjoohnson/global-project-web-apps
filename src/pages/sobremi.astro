@@ -1,10 +1,218 @@
 ---
-import HeaderSimple from '../layouts/Header.astro';
-import FooterSimple from '../layouts/Footer.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Button from "../components/Button.jsx";
+import HeaderSimple from "../layouts/Header.astro";
+import FooterSimple from "../layouts/Footer.astro";
+import Header from "../components/Header.jsx";
+import Footer from "../components/Footer.jsx";
+import "animate.css";
 ---
 
-<HeaderSimple></HeaderSimple>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/icons8-logo.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <title>CV David</title>
+    </head>
+    <HeaderSimple />
+    <body>
+        <div class="back-img">
+            <div class="container">
+                <h1 class="title2">
+                    <a class="animate__animated animate__fadeIn">Sobre mi</a>
+                </h1>
+                <div class="content animate__animated animate__fadeIn">
+                    <div class="left">
+                        <p class="centered-text">
+                            Soy un joven de 23 años, estudiante de ingeniería
+                            electrónica industrial y automática. Me queda solo
+                            un año para acabarla y me gustaría ingresar al mundo
+                            laboral en mi sector de ingeniería. Estoy muy
+                            interesado en el mundo de la electrónica, pero
+                            también me apasiona todo lo relacionado con la
+                            impresión 3D, la edición 3D, la mecatrónica y otras
+                            variantes afines. Soy una persona que se desenvuelve
+                            muy bien en público. Algo que destacaría de mí mismo
+                            es mi actitud, mi creatividad en proyectos, mi
+                            capacidad para aplicarme y mi carácter. Además, soy
+                            capaz de colaborar y superar desafíos.
+                        </p>
+                    </div>
+                    <div class="right">
+                        <img src="/dni.png" alt="Imagen" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <FooterSimple />
 
+    <style>
+        .title {
+            font-size: 50px;
+            text-align: center;
+            margin-top: 80px;
+        }
 
+        .animate__animated.animate__fadeIn {
+            --animate-duration: 2.5s;
+        }
 
-<FooterSimple></FooterSimple>
+        /* Sobre mi */
+
+        .back-img {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: auto;
+            background-position: center;
+            justify-content: center;
+        }
+
+        .back-img::before {
+            content: "";
+            background: linear-gradient(-75deg, #54ee4f, #e368f3, #4fe970);
+            animation: gradient 15s ease infinite;
+            background-size: cover;
+            background-position: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 70px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .title2 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+                "Helvetica Neue", sans-serif;
+            text-align: center;
+            color: #000000;
+            font-size: 40px;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            text-align: justify;
+        }
+        .left {
+            flex-basis: 65%;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            line-height: 1.7;
+            display: flex;
+            justify-content: center; /* Centra horizontalmente el contenido */
+            align-items: center; /* Centra verticalmente el contenido */
+            text-align: justify; /* Justifica el texto */
+        }
+
+        .centered-text {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+                "Helvetica Neue", sans-serif;
+            font-size: 25px;
+        }
+
+        .right {
+            flex-basis: 35%;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            display: flex;
+            justify-content: center; /* Centra horizontalmente el contenido */
+            align-items: center; /* Centra verticalmente el contenido */
+        }
+
+        img {
+            display: block;
+            width: 45%;
+            height: auto;
+        }
+
+        /* Formación */
+        .cuadro {
+            flex-basis: 100%;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            display: flex;
+            justify-content: center; /* Centra horizontalmente el contenido */
+            align-items: center; /* Centra verticalmente el contenido */
+        }
+
+        .tabla {
+            border-collapse: collapse; /* Oculta las líneas de la cuadrícula */
+            width: 100%;
+            padding: 0px;
+            line-height: 1.7;
+        }
+
+        .tabla td {
+            padding: 3px;
+            text-align: center;
+        }
+
+        .tabla td h1 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+                "Helvetica Neue", sans-serif;
+            font-size: 25px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .tabla td h2 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+                "Helvetica Neue", sans-serif;
+            font-size: 20px;
+            color: black;
+        }
+
+        .tabla td h3 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+                "Helvetica Neue", sans-serif;
+            font-size: 18px;
+            color: rgb(43, 43, 43);
+        }
+
+        .tabla td h4 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+                "Helvetica Neue", sans-serif;
+            font-size: 20px;
+            color: black;
+        }
+
+        .tabla img {
+            display: block;
+            width: 100px;
+            height: auto;
+            margin: 0 auto;
+        }
+    </style>
+</html>

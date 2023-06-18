@@ -1,0 +1,80 @@
+.header {
+    background-color: rgb(69, 209, 116);
+    color: rgb(0, 0, 0);
+    padding: 8px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.gradiente {
+    background-image: linear-gradient(45deg, rgb(124, 58, 237), #da62c4 40%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.menu-toggle {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.title {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+    font-weight: bold;
+}
+
+.nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(69, 209, 116);
+    width: 100%;
+    padding: 10px;
+    display: none;
+}
+
+.nav.open {
+    display: block;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.nav-list li {
+    margin-bottom: 10px;
+}
+
+.nav-list li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    padding: 5px;
+}
+
+.nav-list li a:hover {
+    color: rgb(129, 255, 160);
+    background-color: #000;
+    padding: 4px;
+}
