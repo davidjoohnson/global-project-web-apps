@@ -12,6 +12,10 @@
   "dependencies": {
     "@astrojs/react": "^2.2.1",
     "animate.css": "^4.1.1",
-    "astro": "^2.6.4"
+    "astro": "^2.6.4",
+    "react-icons": "^4.9.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.2"
   }
 }

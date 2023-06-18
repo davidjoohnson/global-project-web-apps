@@ -4,17 +4,25 @@ import './header.css';
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
+    const handleMouseEnter = () => {
+        setMenuOpen(true);
+    };
+
+    const handleMouseLeave = () => {
+        setMenuOpen(false);
     };
 
     return (
         <header className="header">
-            <button className="menu-toggle" onClick={toggleMenu}>
+            <div
+                className="menu-toggle"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+            >
                 <i className={menuOpen ? 'fas fa-times' : 'fas fa-bars'}></i>
-            </button>
+            </div>
             <h1 className="title">
-                <span>MyWeb</span> 
+                <span>MyWeb</span>
                 <span className="gradiente"> Currículum</span>
             </h1>
             <nav className={menuOpen ? 'nav open' : 'nav'}>

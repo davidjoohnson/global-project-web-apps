@@ -46,24 +46,17 @@ const Reloj = () => {
     };
 
     return (
-        <div className="back-img">
-            <div className="container animate__animated animate__fadeIn">
-                <h1 className="title2">
-                    <a className="animate__animated animate__fadeIn">Reloj</a>
-                </h1>
-                <div className="cuadro2">
-                    <div className="reloj">
-                        <span id="hora">{hora}</span>
-                        <span className="puntos">:</span>
-                        <span id="minutos">{minutos}</span>
-                        <span className="puntos">:</span>
-                        <span id="segundos">{segundos}</span>
-                    </div>
-                    <button id="cambiarColor" onClick={cambiarColor}>
-                        Cambiar color
-                    </button>
-                </div>
+        <div className="cuadro2">
+            <div className="reloj">
+                <span id="hora">{hora}</span>
+                <span className="puntos">:</span>
+                <span id="minutos">{minutos}</span>
+                <span className="puntos">:</span>
+                <span id="segundos">{segundos}</span>
             </div>
+            <button id="cambiarColor" onClick={cambiarColor}>
+                Cambiar color
+            </button>
         </div>
     );
 };

@@ -26,9 +26,8 @@
     color: #fff;
     cursor: pointer;
     font-size: 20px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    margin-right: 10px;
+    /* Añade este estilo para evitar que el botón colapse */
 }
 
 .title {
@@ -46,9 +45,10 @@
     width: 100%;
     padding: 10px;
     display: none;
+    position: fixed;
 }
 
-.nav.open {
+.header:hover .nav {
     display: block;
 }
 
